@@ -1,0 +1,27 @@
+@import "../../styles/variables.scss";
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-right: 1px solid black;
+  width: 350px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $normal-font-size;
+  background: $menu-light-bg;
+  color: $font-light-color;
+  &.dark {
+    background: $menu-dark-bg;
+    color: $font-dark-color;
+  }
+  .link {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    padding: 20px;
+    cursor: pointer;
+  }
+}

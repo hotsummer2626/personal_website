@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.container {
+  min-height: 100vh;
+  padding-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    font-size: $h2-font-size;
+    margin-bottom: 20px;
+  }
+  .skill {
+    width: 80%;
+    h3 {
+      font-size: $h3-font-size;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: $normal-font-size;
+      margin-bottom: 20px;
+    }
+  }
+}

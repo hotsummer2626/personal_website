@@ -1,0 +1,14 @@
+@import "./styles/variables.scss";
+
+.container {
+  position: relative;
+  .content {
+    padding-left: 350px;
+    background: $content-light-bg;
+    color: $font-light-color;
+    &.dark {
+      background: $content-dark-bg;
+      color: $font-dark-color;
+    }
+  }
+}
