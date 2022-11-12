@@ -5,6 +5,7 @@ import Menu from "./components/Menu/Menu";
 import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
+import Experiences from "./components/Experiences/Experiences";
 import { useSelector } from "react-redux";
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Home />
         <Skills />
         <Projects />
+        <Experiences />
       </div>
     </div>
   );
