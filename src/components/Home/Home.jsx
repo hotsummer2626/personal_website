@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import styles from "./Home.module.scss";
 import Typing from "react-typing-animation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -16,12 +16,12 @@ import { jobTitles, socialMediaList } from "../../static";
 const typingText = (
   <Typing loop={true}>
     <Typing.Speed ms={50} />
-    {jobTitles.map((jobTitle) => (
-      <>
+    {jobTitles.map((jobTitle, index) => (
+      <Fragment key={index}>
         <span>{jobTitle.name}</span>
         <Typing.Delay ms={1000} />
         <Typing.Backspace count={20} />
-      </>
+      </Fragment>
     ))}
   </Typing>
 );

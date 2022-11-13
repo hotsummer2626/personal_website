@@ -1,6 +1,10 @@
 import React from "react";
 import styles from "./App.module.scss";
 import "./global.scss";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
 import Menu from "./components/Menu/Menu";
 import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";

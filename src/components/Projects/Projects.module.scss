@@ -15,49 +15,5 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    .listItem {
-      border-radius: 20px;
-      overflow: hidden;
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-      transition: 0.4s;
-      cursor: pointer;
-      &:hover {
-        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-        transform: translateY(-8px);
-        .viewMoreButton{
-          box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        }
-      }
-      .imgWrapper {
-        height: 162px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #fff;
-        img {
-          max-width: 100%;
-          max-height: 100%;
-        }
-      }
-      h3 {
-        font-size: $normal-font-size;
-        text-align: center;
-        padding: 30px 0 10px;
-      }
-      .viewMoreButton {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        width: max-content;
-        padding: 5px 15px;
-        margin: 0 auto 20px;
-        border-radius: 10px;
-        transition: 0.2s;
-        &.active{
-          box-shadow: initial;
-        }
-      }
-    }
   }
 }
