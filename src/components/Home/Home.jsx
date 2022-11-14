@@ -7,9 +7,11 @@ import {
   faMoon,
   faComputerMouse,
   faArrowDown,
+  faBars,
 } from "@fortawesome/free-solid-svg-icons";
 import { useSelector, useDispatch } from "react-redux";
 import { switchTheme } from "../../store/slices/theme";
+import { switchMenu } from "../../store/slices/menu";
 import { Parallax } from "react-scroll-parallax";
 import { jobTitles, socialMediaList } from "../../static";
 
@@ -52,11 +54,21 @@ const Home = () => {
           </a>
         ))}
       </div>
-      <div
-        className={`${styles.themeSwitchButton} ${isLight ? "" : styles.dark}`}
-        onClick={() => dispatch(switchTheme())}
-      >
-        <FontAwesomeIcon icon={isLight ? faMoon : faSun} />
+      <div className={`${styles.header} ${isLight ? "" : styles.dark}`}>
+        <div className={styles.menuIcon}>
+          <FontAwesomeIcon
+            icon={faBars}
+            onClick={() => dispatch(switchMenu())}
+          />
+        </div>
+        <div
+          className={`${styles.themeSwitchButton} ${
+            isLight ? "" : styles.dark
+          }`}
+          onClick={() => dispatch(switchTheme())}
+        >
+          <FontAwesomeIcon icon={isLight ? faMoon : faSun} />
+        </div>
       </div>
       <Parallax opacity={[1, -1]} className={styles.scrollDownButton}>
         <div>

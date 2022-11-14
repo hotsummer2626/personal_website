@@ -26,21 +26,29 @@
       }
     }
   }
-  .themeSwitchButton {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid $font-light-color;
+  .header {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    padding: 30px 30px 0;
+    background: $content-light-bg;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 25px;
-    cursor: pointer;
     &.dark {
-      border: 1px solid $font-dark-color;
+      background: $content-dark-bg;
+    }
+    .menuIcon {
+      display: none;
+      font-size: $h3-font-size;
+    }
+    .themeSwitchButton {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: auto;
+      font-size: $h3-font-size;
+      cursor: pointer;
     }
   }
   .scrollDownButton {
@@ -50,7 +58,7 @@
     align-items: center;
     gap: 5px;
     font-size: $normal-font-size;
-    .arrowIcon{
+    .arrowIcon {
       animation: arrowMove 1s ease infinite;
     }
   }
@@ -65,5 +73,27 @@
   }
   100% {
     transform: translateY(-20%);
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    h1 {
+      font-size: $h1-font-size-sm;
+      width: 100%;
+      text-align: center;
+    }
+    .title {
+      font-size: $h2-font-size-sm;
+    }
+    .socialMedia {
+      font-size: $h1-font-size-sm;
+    }
+    .header {
+      padding: 10px 10px 0;
+      .menuIcon {
+        display: block;
+      }
+    }
   }
 }

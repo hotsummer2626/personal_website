@@ -2,6 +2,7 @@
 
 .container {
   position: fixed;
+  z-index: 9999;
   top: 0;
   left: 0;
   border-right: 1px solid black;
@@ -28,6 +29,26 @@
     border-radius: 20px;
     &.active {
       background: $content-light-bg;
+    }
+  }
+  .closeIcon {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: none;
+    font-size: $h3-font-size;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    transform: translateX(-100%);
+    transition: 0.3s;
+    &.show {
+      transform: translateX(0);
+    }
+    .closeIcon {
+      display: block;
     }
   }
 }

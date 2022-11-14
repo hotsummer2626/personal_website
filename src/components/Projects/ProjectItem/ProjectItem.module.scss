@@ -44,3 +44,18 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .container {
+    &:hover {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+      transform: translateY(0);
+    }
+    .imgWrapper {
+      height: 182px;
+    }
+    .viewMoreButton {
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    }
+  }
+}

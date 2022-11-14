@@ -6,8 +6,10 @@ import {
   faScrewdriverWrench,
   faLightbulb,
   faBriefcase,
+  faArrowLeft,
 } from "@fortawesome/free-solid-svg-icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { switchMenu } from "../../store/slices/menu";
 
 const linksInfo = [
   { id: 1, name: "Home", icon: faHouse, anchor: "home" },
@@ -29,9 +31,15 @@ const Menu = () => {
   const [activeLink, setActiveLink] = useState("home");
   const {
     theme: { isLight },
+    menu: { isShow },
   } = useSelector((state) => state);
+  const dispatch = useDispatch();
   return (
-    <div className={`${styles.container} ${isLight ? "" : styles.dark}`}>
+    <div
+      className={`${styles.container} ${isLight ? "" : styles.dark} ${
+        isShow ? styles.show : ""
+      }`}
+    >
       <div className={styles.linksWrapper}>
         {linksInfo.map((link) => (
           <div
@@ -42,12 +50,19 @@ const Menu = () => {
             onClick={() => {
               scrollToAnchor(link.anchor);
               setActiveLink(link.anchor);
+              dispatch(switchMenu());
             }}
           >
             <FontAwesomeIcon icon={link.icon} />
             <div>{link.name}</div>
           </div>
         ))}
+      </div>
+      <div className={styles.closeIcon}>
+        <FontAwesomeIcon
+          icon={faArrowLeft}
+          onClick={() => dispatch(switchMenu())}
+        />
       </div>
     </div>
   );

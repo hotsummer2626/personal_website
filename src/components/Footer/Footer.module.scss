@@ -5,9 +5,9 @@
   text-align: center;
   padding-top: 40px;
   padding-bottom: 20px;
-  background: $menu-light-bg;
+  background: $content-light-bg;
   &.dark {
-    background: $menu-dark-bg;
+    background: $content-dark-bg;
     border-top: 1px solid #fff;
   }
 }

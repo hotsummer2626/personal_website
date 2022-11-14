@@ -22,3 +22,19 @@
     }
   }
 }
+
+@media (max-width:576px) {
+  .container{
+    h2{
+      font-size: $h2-font-size-sm;
+    }
+    .skill{
+      h3{
+        font-size: $h3-font-size-sm;
+      }
+      p{
+        font-size: $normal-font-size-sm;
+      }
+    }
+  }
+}
