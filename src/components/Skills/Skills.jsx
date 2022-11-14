@@ -4,7 +4,7 @@ import { skillList } from "../../static";
 
 const Skills = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="skills">
       <h2>Skills</h2>
       {skillList.map((skill) => (
         <div className={styles.skill} key={skill.id}>

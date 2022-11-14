@@ -10,6 +10,7 @@ import Home from "./components/Home/Home";
 import Skills from "./components/Skills/Skills";
 import Projects from "./components/Projects/Projects";
 import Experiences from "./components/Experiences/Experiences";
+import Footer from "./components/Footer/Footer";
 import { useSelector } from "react-redux";
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         <Skills />
         <Projects />
         <Experiences />
+        <Footer/>
       </div>
     </div>
   );

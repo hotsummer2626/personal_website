@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem/ProjectItem";
 
 const Projects = () => {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="projects">
       <h2>Projects</h2>
       <div className={styles.listWrapper}>
         {projectList.map((project) => (

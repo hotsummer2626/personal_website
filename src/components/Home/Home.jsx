@@ -33,7 +33,7 @@ const Home = () => {
   const dispatch = useDispatch();
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="home">
       <h1>Hello, my name is Junqi Su</h1>
       <div className={styles.title}>
         <span>I'm a</span>&nbsp;
